@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/**全局 S**/
+.full-height{height: 100%;}
+.body-padding{padding: .4rem;}/*body边缘padding*/
+/*独立颜色配置 S*/
+.color-yellow{color: #fab43c!important;}
+.color-red{color: #ff0000!important;}
+/*独立颜色配置 E*/
+
+/*按钮 S*/
+.btn-bar{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;}
+.btn-bar .ui-button{padding: .1rem;flex-grow: 1;background: #f5f5f5;color: #000;border: 1px solid #a8a8a8;font-size: .16rem;-webkit-border-radius: .16rem;-moz-border-radius:.16rem;border-radius: .16rem;}
+.btn-bar .ui-button.s-green{background: #51a938;border-color:#51a938;color: #FFF;}
+.btn-bar .ui-button:first-child:nth-last-child(2),
+.btn-bar .ui-button:first-child:nth-last-child(2)~.ui-button{margin: 0 .1rem;}
+.btn-bar-2{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;padding: .1rem;}
+.btn-bar-2.s-line{border-top:1px solid #919191;border-bottom:1px solid #919191;}
+.btn-bar-2 .ui-button{padding: 0 .1rem;flex-grow: 1;color: #000;font-size: .16rem;color: #929191;border-right: 1px solid #919191;}
+.btn-bar-2 .ui-button.s-green{color: #51a938;}
+.btn-bar-2 .ui-button:last-child{border-right: 0;}
+/*按钮 E*/
+
+/*下拉多选项卡 S*/
+.ui-select{position: relative;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;}
+.ui-select select{position: relative;flex-grow: 1;border: 0;background: none;appearance:none;-moz-appearance:none;-webkit-appearance:none;padding: .12rem .06rem;z-index:2;}
+.ui-select select:first-child:nth-last-child(2),
+.ui-select select:first-child:nth-last-child(2)~select{flex-basis: 50%;}
+.ui-select select:first-child:nth-last-child(3),
+.ui-select select:first-child:nth-last-child(3)~select{flex-basis: 33.33%;}
+/*下拉多选项卡 E*/
+
+/*单选 S*/
+.re-radio {display: none;}
+.re-radio + label {-webkit-appearance: none;position: relative;cursor:pointer;}
+.re-radio:checked + label {}
+.re-radio:checked + label:after {content: ' ';}
+/*单选 E*/
+
+/**全局 E**/
+/**通用模块 S**/
+
+/*表单设置模块 S*/
+.m-form-list.top-line{border-top: 1px solid #919191;}
+.m-form-list.tar dd{text-align: right;}
+.m-form-list dl{padding: .04rem 0;font-size: .14rem;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;-ms-align-items: center;align-items: center;} 
+.m-form-list dl.s-line{border-bottom: 1px solid #919191;}
+.m-form-list dt{color: #afafaf;flex-grow: 1;padding: .04rem 0;-webkit-flex-shrink: 0;flex-shrink: 0;}
+.m-form-list dd{-webkit-flex-shrink: 1;flex-shrink: 1;flex-grow: 3;color: #666;}
+.m-form-list dd a{display: block;color: #666;}
+.m-form-list .iconlink dd:after{display: inline-block;font-family: 'iconfont';content:"\e653";padding-left: .4em;}
+.m-form-list .input-interval{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;-ms-align-items: center;align-items: center;}
+.m-form-list .input-interval label{flex-basis: 45%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding: 0 .05rem;}
+.m-form-list input[type=text],
+.m-form-list input[type=number],
+.m-form-list input[type=date]{padding: .04rem;width: 100%;border: 1px solid #d3d3d3;-webkit-border-radius: .04rem;-moz-border-radius:.04rem;border-radius: .04rem;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+.m-form-list .input-interval input,
+.m-form-list input.tac{text-align: center;}
+.m-form-list .input-interval i{flex-basis: 10%;text-align: center;}
+.m-form-list.tar .ui-select select{direction: rtl;padding-right: .14rem;}
+.m-form-list img.thumbnail{height: .5rem;width: .6rem;-o-object-fit: contain;object-fit: contain;}
+/*表单设置模块 S*/
+
+/*特权 S*/
+.m-tequan{font-size: .16rem;margin-bottom: .12rem;}
+.m-tequan li{padding-left: .3rem;margin-bottom: .08rem;background: url(../images/icon-7.png) left center/contain no-repeat;}
+/*特权 E*/
+/**通用模块 E**/
+
+
+/*查看二维码 S*/
+.m-read-code{padding: .4rem .2rem;}
+.m-read-code .title{margin-bottom: .3rem;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;padding: .14rem;font-size: .16rem;background: #00a0e9;color: #FFF;line-height: 1.6;}
+.m-read-code .title h2{flex-grow: 1;}
+.m-read-code .title h2.t2{text-align: center;}
+.m-read-code .title h2.t3{-webkit-flex-shrink: 0;flex-shrink: 0;text-align: right;}
+.m-read-code .title .indu{display: inline-block;padding-left: .3rem;background: url(../images/icon-1.png) left center/contain no-repeat;color: #FFF;}
+.m-read-code .title .addr{display: inline-block;padding-left: .3rem;background: url(../images/icon-2.png) left center/contain no-repeat;color: #FFF;}
+
+.m-read-code .code{margin: 0 .5rem .6rem;text-align: center;}
+.m-read-code .code img{width: 2.6rem;}
+/*查看二维码 E*/
+
+/*二维码发布 S*/
+.m-code-fabu{}
+.m-code-fabu dl.code{margin-bottom: .1rem;}
+.m-code-fabu dl.text{padding: 0;}
+.m-code-fabu .form-bar{margin-bottom: .2rem;}
+/*二维码发布 E*/
+
+/*查找群 S*/
+.m-find-group{}
+.m-find-group .form-bar{margin-bottom: .6rem;}
+.m-find-group dt{flex-basis: 30%;}
+.m-find-group dd{flex-basis: 70%;}
+/*查找群 E*/
+
+/*发布微信群 1 S*/
+.m-fabu-1{background: #393a3f;}
+.m-fabu-1 .mid-bar{padding-top: 1.4rem;margin-bottom: 1.6rem;text-align: center;}
+.m-fabu-1 button.upload{padding-top: 1.8rem;width: 1.6rem;background: url(../images/icon-3.png) center top/contain no-repeat;color: #ffffff;font-size: .18rem;}
+.m-fabu-1 .text{text-align: center;color: #919191;font-size: .15rem;line-height: 1.6;}
+.m-fabu-1 .upload-file{display: none;}
+/*发布微信群 1 E*/
+
+
+/*个人中心 S*/
+.m-personal{}
+.m-personal .top-bar{height: .3rem;margin-bottom: .2rem;}
+.m-personal .user-icon{display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;}
+.m-personal .user-icon i{width: .4rem;text-align: center;transform:scale(.9);-webkit-transform:scale(.9);}
+.m-personal .user-icon i:before{margin-bottom: .02rem;}
+.m-personal .user-icon i.i-none{color: #929191;}
+.m-personal .user-icon i.i-none:before{content:"";width: .26rem;height: .3rem;display: block;margin-left:auto;margin-right:auto;background: url(../images/icon-5.png) center/contain no-repeat;}
+.m-personal .user-icon i.i-open{color: #ffb317;}
+.m-personal .user-icon i.i-open:before{content:"";width: .26rem;height: .3rem;display: block;margin-left:auto;margin-right:auto;background: url(../images/icon-6.png) center/contain no-repeat;}
+.m-personal .mid-bar{}
+.m-personal .my-score{margin-bottom: .3rem;text-align: center;}
+.m-personal .my-score .icon-score{display: inline-block;width: 1rem;padding-top: 1rem;margin-bottom: .12rem;}
+.m-personal .my-score .icon-score.picon-1{background: url(../images/picon-1.png) center/contain no-repeat;}
+.m-personal .my-score .icon-score.picon-2{background: url(../images/picon-2.png) center/contain no-repeat;}
+.m-personal .my-score .icon-score.picon-3{background: url(../images/picon-3.png) center/contain no-repeat;}
+.m-personal .my-score .icon-score.picon-4{background: url(../images/picon-4.png) center/contain no-repeat;}
+.m-personal .my-score .text{margin-bottom: .08rem;font-size: .2rem;}
+.m-personal .my-score .text2{color: #929191;font-size: .14rem;}
+.m-personal .my-score .num{font-size: .5rem;}
+.m-personal .my-score.mgb-4{margin-bottom: .7rem;}
+.m-personal .btn-bar{margin-bottom: .08rem;}
+.m-personal .btn-bar.last{margin-bottom: .2rem;}
+.tequan-text{color: #929191;margin-bottom: .08rem;}
+
+/*个人中心 E*/
+
+/*开通包月服务 S*/
+
+.m-settlement{}
+.m-settlement .m-form-list dt{font-size: .16rem;}
+.m-settlement .pri{font-size: .2rem;color: #000;}
+.m-settlement .ser{font-size: .22rem;color: #000;}
+.m-settlement .day{font-size: .16rem;color: #929191;}
+.m-settlement .mgb-1{margin-bottom: .1rem;}
+.m-settlement .form-bar{margin-bottom: .3rem;}
+.m-settlement .btn-bar{margin-bottom: 1rem;}
+.m-pay-radio{}
+.m-pay-radio .re-radio + label{display: block;font-size: .2rem;line-height: 1.6;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;}
+.m-pay-radio .re-radio + label span{flex-grow: 1;}
+.m-pay-radio .re-radio:checked + label {}
+.m-pay-radio .re-radio:checked + label:after{width: .22rem;content:"";background: url(../images/icon-7.png) right center/contain no-repeat;}
+/*开通包月服务 E*/
+
+
+
+
+
