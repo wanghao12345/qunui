@@ -23,7 +23,7 @@
 
 /*下拉多选项卡 S*/
 .ui-select{position: relative;display: -webkit-flex;display: -moz-flex;display: -ms-flex;display: -o-flex;display: flex;}
-.ui-select select{position: relative;flex-grow: 1;border: 0;background: none;appearance:none;-moz-appearance:none;-webkit-appearance:none;padding: .12rem .06rem;z-index:2;}
+.ui-select select{position: relative;flex-grow: 1;outline:none;border: 0;background: none;appearance:none;-moz-appearance:none;-webkit-appearance:none;padding: .12rem .06rem;z-index:2;}
 .ui-select select:first-child:nth-last-child(2),
 .ui-select select:first-child:nth-last-child(2)~select{flex-basis: 50%;}
 .ui-select select:first-child:nth-last-child(3),
