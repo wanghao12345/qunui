@@ -8,7 +8,7 @@ $(function(){
 	//地区选择
 	$('button#addr').on('click', function(event) {
 		//跳查找群
-		window.location.href='searchQun.html';
+		window.location.href='searchQun.html?type=1';
 	});
 	//质量群
 	$('button#commonGroup').on('click', function(event) {

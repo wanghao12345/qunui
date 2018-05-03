@@ -4,8 +4,17 @@ $(function(){
 	 * 查找
 	 */
 	$('button#search-btn').on('click', function(event) {
+		var industry = $('select#industry').val();
+		var area = $('select#area').val();
+		var type = getQueryString('type');
 		//跳查找二维码
-		window.location.href='viewQRCode.html';
+		if (type == '1') { //质量群
+			window.location.href='massGroup.html?industry='+industry+'&area='+area;
+		}
+		if (type == '2') { //普通群
+			window.location.href='commonGroup.html?industry='+industry+'&area='+area;
+		}
+		
 	});
 
 })
@@ -38,4 +47,13 @@ function initOption(){
 	    console.log(err)
 	  }
 	})	
+}
+
+/**
+ * 获取url中的参数
+ */
+function getQueryString(name) {
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
 }
