@@ -10,25 +10,36 @@
 <title>上传二维码</title>
 <link rel="stylesheet" type="text/css" href="css/_reset.css"/>
 <link rel="stylesheet" href="css/index.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="js/webuploader/webuploader.css">
 <script type="text/javascript" src="js/mobile-adaptation.min.js"></script><!--移动端适配-->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/webuploader/webuploader.js"></script>
+<script type="text/javascript" src="js/selectQRCode.js"></script>
 </head>
 
 <body class="full-height">
 
 <div class="m-fabu-1 full-height">
-	<div class="mid-bar"><button class="upload j-upload-btn">点击上传二维码</button><input type="file" class="upload-file"></div>
-	<div class="foot-bar">
-		<div class="text">发布需要支付18元<br>请勿上传无效/重复/过期的二维码</div>
+	<div class="mid-bar" style="position: relative;">
+		<button class="upload j-upload-btn">点击上传二维码</button>
+		<!-- <input type="file" class="upload-file"></div> -->
+	<!--dom结构部分-->
+		<div id="uploader-demo">
+		    <!--用来存放item-->
+		    <div id="fileList" class="uploader-list"></div>
+		    <div id="filePicker">选择图片</div>
+		</div>
+		<div class="foot-bar" style="margin-top: 1rem;">
+			<div class="text">发布需要支付18元<br>请勿上传无效/重复/过期的二维码</div>
+		</div>
 	</div>
 </div>
-
 <script>
-	$(function(){
-		$(".j-upload-btn").on('click', function(event) {
-			$(this).next(".upload-file").trigger("click");
-		});
-	})
+	// $(function(){
+	// 	$(".j-upload-btn").on('click', function(event) {
+	// 		$(this).next(".upload-file").trigger("click");
+	// 	});
+	// })
 </script>
 </body>
 </html>
