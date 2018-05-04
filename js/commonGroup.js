@@ -3,12 +3,23 @@ $(function(){
 	getParam();
 	//行业选择
 	$('button#indu').on('click', function(event) {
-		window.location.href='searchQun.html?type=2';
+		layer.confirm('请购买vip或者包月后进行行业选择', {
+		  btn: ['购买','取消'] //按钮
+		}, function(){
+		  window.location.href='myCenter.html';
+		}, function(){
+
+		}); 
 	});
 	//地区选择
 	$('button#addr').on('click', function(event) {
-		//跳查找群
-		window.location.href='searchQun.html?type=2';
+		layer.confirm('请购买vip或者包月后进行地区选择', {
+		  btn: ['购买','取消'] //按钮
+		}, function(){
+		  window.location.href='myCenter.html';
+		}, function(){
+
+		}); 
 	});
 	//质量群
 	$('button#massGroup').on('click', function(event) {
