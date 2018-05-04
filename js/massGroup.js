@@ -1,5 +1,6 @@
 $(function(){
-	getTestTk();
+	// getTestTk();
+	getParam();
 
 	//行业选择
 	$('button#indu').on('click', function(event) {
@@ -50,6 +51,28 @@ function getTestTk(){
 	  }
 	})	
 }
+
+/**
+ * 获取url参数
+ */
+function getParam(){
+    industry = getQueryString('industry');
+    if (industry==null) {
+    	industry = '';
+    }
+    area = getQueryString('area');
+    if (area == null) {
+    	area = '';
+    }
+    tk = getQueryString('tk');
+    if (tk == null) {
+    	tk = '';
+    } 
+    getQRCode(tk,industry,area);   
+}
+
+
+
 
 /**
  * 获取数据

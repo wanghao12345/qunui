@@ -1,6 +1,6 @@
 $(function(){
-	getTestTk();
-
+	// getTestTk();
+	getParam();
 	//行业选择
 	$('button#indu').on('click', function(event) {
 
@@ -39,6 +39,17 @@ function getTestTk(){
 	  }
 	})	
 }
+/**
+ * 获取url参数
+ */
+function getParam(){
+    tk = getQueryString('tk');
+    if (tk == null) {
+    	tk = '';
+    } 
+    getQRCode(tk,0);  
+}
+
 /**
  * 获取数据
  */
