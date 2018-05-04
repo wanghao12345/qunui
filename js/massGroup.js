@@ -4,7 +4,7 @@ $(function(){
 
 	//行业选择
 	$('button#indu').on('click', function(event) {
-
+		window.location.href='searchQun.html?type=1';
 	});
 	//地区选择
 	$('button#addr').on('click', function(event) {
