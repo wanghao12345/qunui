@@ -7,24 +7,34 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
 <meta http-equiv="pragma" content="no-cache" />
-<title>上传二维码</title>
+<title>普通群</title>
 <link rel="stylesheet" type="text/css" href="css/_reset.css"/>
 <link rel="stylesheet" href="css/index.css" type="text/css" />
 <script type="text/javascript" src="js/mobile-adaptation.min.js"></script><!--移动端适配-->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/layer-v3.1.1/layer/layer.js"></script>
-<script type="text/javascript" src="js/selectQRCode.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/commonGroup.js"></script>
 </head>
 
-<body class="full-height">
-	<div class="m-fabu-1 full-height">
-	<div class="mid-bar" style="position: relative;">
-		<button class="upload j-upload-btn">点击上传二维码</button>
-		<input type="file" name="upload-file" accept="image/*" class="upload-file" id="upload-file" onchange="upQRCodeImg(this)">	
-		<div class="foot-bar" style="margin-top: 1rem;">
-			<div class="text">发布需要支付18元<br>请勿上传无效/重复/过期的二维码</div>
-		</div>
+<body>
+
+
+<div class="m-read-code">
+	<div class="title">
+		<h2 class="t1"><button class="indu" id="indu">行业选择</button></h2>
+		<h2 class="t2"><button class="addr" id="addr">地区选择</button></h2>
+		<h2 class="t3"><b class="color-yellow" id="points">0</b>积分</h2>
+	</div>
+	<div class="code" id="QRCode">
+		<img src="images/code-1.png" alt="">
+	</div>
+	<div class="btn-bar">
+		<button class="ui-button" id="massGroup">效果群</button>
+		<button class="ui-button s-green" id="lookNext">查看下一个</button>
 	</div>
 </div>
+
+
 </body>
 </html>

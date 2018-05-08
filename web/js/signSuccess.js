@@ -24,3 +24,36 @@ $(function(){
 
 
 })
+
+
+
+var tk = '';
+if (getCookie('tk') != null) {
+	tk = getCookie('tk')
+	signRequest();
+} else {
+	tk = getQueryString('tk');
+	signRequest();
+}
+
+
+
+/**
+ * 签到
+ */
+function signRequest(){
+	
+	$.ajax({
+	  url: 'http://47.104.218.168:8117/3?tk='+tk,
+	  type: 'get',
+	  dataType: 'json',
+	  success: function (data) {
+	    console.log(data);
+	   
+
+	  },
+	  fail: function (err) {
+	    console.log(err)
+	  }
+	})	
+}

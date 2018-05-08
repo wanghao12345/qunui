@@ -6,7 +6,7 @@ $(function(){
 		layer.confirm('请购买vip或者包月后进行行业选择', {
 		  btn: ['购买','取消'] //按钮
 		}, function(){
-		  window.location.href='myCenter.html';
+		  window.location.href='myCenter.html?tk='+tk;
 		}, function(){
 
 		}); 
@@ -16,19 +16,26 @@ $(function(){
 		layer.confirm('请购买vip或者包月后进行地区选择', {
 		  btn: ['购买','取消'] //按钮
 		}, function(){
-		  window.location.href='myCenter.html';
+		  window.location.href='myCenter.html?tk='+tk;
 		}, function(){
 
 		}); 
 	});
 	//质量群
 	$('button#massGroup').on('click', function(event) {
-		window.location.href='massGroup.html';
+		window.location.href='massGroup.html?tk='+tk;
 	});
 	//查看下一个
 	$('button#lookNext').on('click', function(event) {
 		getQRCode(tk,1);
 	});
+	//获取积分
+	var points = getCookie('points')==null? 0 : getCookie('points');
+	if (points==0) {
+		window.location.href='CannotView.html?tk='+tk;
+	}
+	$('b#points').html(points);
+
 })
 var tk = '';
 
@@ -92,3 +99,9 @@ function getQueryString(name) {
 	var r = window.location.search.substr(1).match(reg); 
 	if (r != null) return unescape(r[2]); return null; 
 }
+
+
+
+
+
+

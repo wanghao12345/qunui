@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="css/index.css" type="text/css" />
 <script type="text/javascript" src="js/mobile-adaptation.min.js"></script><!--移动端适配-->
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="wx_js/wxin.js"></script>
+<script type="text/javascript" src="js/cookie.js"></script>
 <script type="text/javascript" src="js/openMember.js"></script>
 </head>
 
@@ -21,7 +24,7 @@
 	<div class="form-bar m-form-list tar">
   	<dl>
   		<dt>付款金额</dt>
-  		<dd><div class="pri">28.00</div></dd>
+  		<dd><div class="pri" id="money">28.00</div></dd>
   	</dl>
   	<dl class="mgb-1">
   		<dt>商品项目</dt>
@@ -42,7 +45,7 @@
   </div>
 
 	<div class="btn-bar">
-		<button class="ui-button s-green">确认付款</button>
+		<button class="ui-button s-green" id="query-btn">确认付款</button>
 	</div>
 
 	<div class="end-bar">

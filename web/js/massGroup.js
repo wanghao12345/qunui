@@ -4,23 +4,28 @@ $(function(){
 
 	//行业选择
 	$('button#indu').on('click', function(event) {
-		window.location.href='searchQun.html?type=1';
+		window.location.href='searchQun.html?type=1&tk='+tk;
 	});
 	//地区选择
 	$('button#addr').on('click', function(event) {
 		//跳查找群
-		window.location.href='searchQun.html?type=1';
+		window.location.href='searchQun.html?type=1&tk='+tk;
 	});
 	//质量群
 	$('button#commonGroup').on('click', function(event) {
-		window.location.href='commonGroup.html';
+		window.location.href='commonGroup.html?tk='+tk;
 	});
 	//查看下一个
 	$('button#lookNext').on('click', function(event) {
 		getQRCode(tk,industry,area);
 	});
 
-
+	//获取积分
+	var points = getCookie('points')==null? 0 : getCookie('points');
+	if (points==0) {
+		window.location.href='CannotView.html?tk='+tk;
+	}
+	$('b#points').html(points);
 
 
 })
