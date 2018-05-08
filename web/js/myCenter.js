@@ -38,7 +38,7 @@ $(function(){
 	});	
 	//获取积分
 	var points = getCookie('points')==null? 0 : getCookie('points');
-	$('b#points').html(points);
+	$('#points').html(points);
 
 })
 

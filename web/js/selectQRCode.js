@@ -6,6 +6,12 @@ $(function(){
         $(this).next(".upload-file").trigger("click");
     });
 
+
+    // $('input#upload-file').on('change',function(file){
+    //   $('#input').get(0).files[0];
+    //     upQRCodeImg(file);
+    // })
+
 })
 
 var tk = '';
@@ -14,6 +20,8 @@ if (getCookie('tk') != null) {
 } else {
   tk = getQueryString('tk');
 }
+
+
 
 
 /**
